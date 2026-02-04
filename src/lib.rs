@@ -155,11 +155,11 @@ pub mod proxy {
 pub mod transport {
     pub mod internet {
         include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.rs"));
-        pub mod udpmask {
+        pub mod finalmask {
             pub mod salamander {
                 include!(concat!(
                     env!("OUT_DIR"),
-                    "/xray.transport.internet.udpmask.salamander.rs"
+                    "/xray.transport.internet.finalmask.salamander.rs"
                 ));
             }
         }
