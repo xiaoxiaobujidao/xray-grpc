@@ -25,6 +25,9 @@ pub mod common {
     pub mod protocol {
         include!(concat!(env!("OUT_DIR"), "/xray.common.protocol.rs"));
     }
+    pub mod geodata {
+        include!(concat!(env!("OUT_DIR"), "/xray.common.geodata.rs"));
+    }
 }
 
 // App 配置
@@ -40,6 +43,9 @@ pub mod app {
         pub mod fakedns {
             include!(concat!(env!("OUT_DIR"), "/xray.app.dns.fakedns.rs"));
         }
+    }
+    pub mod geodata {
+        include!(concat!(env!("OUT_DIR"), "/xray.app.geodata.rs"));
     }
     pub mod log {
         include!(concat!(env!("OUT_DIR"), "/xray.app.log.rs"));
@@ -106,6 +112,9 @@ pub mod proxy {
     }
     pub mod hysteria {
         include!(concat!(env!("OUT_DIR"), "/xray.proxy.hysteria.rs"));
+        pub mod account {
+            include!(concat!(env!("OUT_DIR"), "/xray.proxy.hysteria.account.rs"));
+        }
     }
     pub mod loopback {
         include!(concat!(env!("OUT_DIR"), "/xray.proxy.loopback.rs"));
@@ -156,10 +165,50 @@ pub mod transport {
     pub mod internet {
         include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.rs"));
         pub mod finalmask {
+            pub mod fragment {
+                include!(concat!(
+                    env!("OUT_DIR"),
+                    "/xray.transport.internet.finalmask.fragment.rs"
+                ));
+            }
             pub mod salamander {
                 include!(concat!(
                     env!("OUT_DIR"),
                     "/xray.transport.internet.finalmask.salamander.rs"
+                ));
+            }
+            pub mod header {
+                pub mod custom {
+                    include!(concat!(
+                        env!("OUT_DIR"),
+                        "/xray.transport.internet.finalmask.header.custom.rs"
+                    ));
+                }
+            }
+            pub mod mkcp {
+                pub mod header {
+                    include!(concat!(
+                        env!("OUT_DIR"),
+                        "/xray.transport.internet.finalmask.mkcp.header.rs"
+                    ));
+                }
+            }
+            pub mod noise {
+                include!(concat!(
+                    env!("OUT_DIR"),
+                    "/xray.transport.internet.finalmask.noise.rs"
+                ));
+            }
+            pub mod realm {
+                include!(concat!(
+                    env!("OUT_DIR"),
+                    "/xray.transport.internet.finalmask.realm.rs"
+                ));
+            }
+            pub mod sudoku {
+                include!(concat!(
+                    env!("OUT_DIR"),
+                    "/xray.transport.internet.finalmask.sudoku.rs"
                 ));
             }
         }
