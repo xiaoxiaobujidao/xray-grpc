@@ -82,6 +82,7 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
                 "Xray-core/transport/internet/finalmask/sudoku/config.proto",
                 "Xray-core/transport/internet/finalmask/xdns/config.proto",
                 "Xray-core/transport/internet/finalmask/xicmp/config.proto",
+                "Xray-core/transport/internet/finalmask/xmc/config.proto",
                 "Xray-core/transport/internet/grpc/config.proto",
                 "Xray-core/transport/internet/grpc/encoding/stream.proto",
                 "Xray-core/transport/internet/headers/dns/config.proto",

@@ -211,6 +211,12 @@ pub mod transport {
                     "/xray.transport.internet.finalmask.sudoku.rs"
                 ));
             }
+            pub mod xmc {
+                include!(concat!(
+                    env!("OUT_DIR"),
+                    "/xray.transport.internet.finalmask.xmc.rs"
+                ));
+            }
         }
         pub mod grpc {
             pub mod encoding {
