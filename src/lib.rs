@@ -224,32 +224,11 @@ pub mod transport {
             }
         }
         pub mod headers {
-            pub mod dns {
-                include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.headers.dns.rs"));
-            }
             pub mod http {
                 include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.headers.http.rs"));
             }
             pub mod noop {
                 include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.headers.noop.rs"));
-            }
-            pub mod srtp {
-                include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.headers.srtp.rs"));
-            }
-            pub mod tls {
-                include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.headers.tls.rs"));
-            }
-            pub mod utp {
-                include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.headers.utp.rs"));
-            }
-            pub mod wechat {
-                include!(concat!(env!("OUT_DIR"), "/xray.transport.internet.headers.wechat.rs"));
-            }
-            pub mod wireguard {
-                include!(concat!(
-                    env!("OUT_DIR"),
-                    "/xray.transport.internet.headers.wireguard.rs"
-                ));
             }
         }
         pub mod httpupgrade {
